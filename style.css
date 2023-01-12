@@ -1,0 +1,116 @@
+#addmessagebox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#title{
+  font-size: 50px;
+  font-weight: bold;
+}
+#addbutton{
+    border-radius: 8px;
+    padding: 15px 35px;
+    font-size: 24px;
+    color: white;
+    background-color: #3838b6;
+}
+#addbutton:hover{
+  background-color: lightgreen; /* Green */
+}
+#grid-container{
+  display: grid;
+  background-color: rgb(235,235,255);
+  justify-items: start;
+  row-gap: 5px;
+  padding-bottom: 10px;
+  grid-template-areas:
+  ". . delete"
+  "message message message"
+  "attributes . ."
+}
+#message{
+  grid-area: message;
+  font-size: 32px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+#attributes{
+  grid-area: attributes;
+  align-self: start;
+  justify-self: start;
+  padding-left: 15px;
+}
+#delete{
+  grid-area: delete;
+  place-self: end end;
+  margin-right: 8px;
+}
+#deletebutton:after{
+    display: inline-block;
+    content: "\2715"; /* https://stackoverflow.com/questions/5353461/unicode-character-for-x-cancel-close */
+    color: black;
+    font-size: 20px;
+}
+#deletenobutton:after{
+    display: inline-block;
+    content: ""; /* https://stackoverflow.com/questions/5353461/unicode-character-for-x-cancel-close */
+    color: black;
+    font-size: 20px;
+}
+.BoxPopUp{
+    position: fixed;
+    width: 750px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px; /* Negative half of height. */
+    margin-left: -375px; /* Negative half of width. */
+    /*https://stackoverflow.com/questions/2005954/centers-a-positionfixed-element*/
+    border-radius: 10px;
+    background-color: rgb(238,238,238);
+    box-shadow: 0px 0px 14px 0px rgba(50, 50, 50, 0.8); /*https://css3gen.com/wp-content/cache/all/box-shadow/index.html*/
+    font-size: 24px;
+    padding-left: 35px;
+}
+#addMessageForm{
+    display: none;
+}
+#loginBox{
+    text-align: center;
+    padding-left: 0;
+}
+textarea{
+    width:94%;
+    height:240px;
+    font-size: 18px;
+    max-width:94%;
+    max-height:290px;
+}
+.formbuttons{
+    font-size: 22px;
+}
+#logout{
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: white;
+    background-color: #3838b6;
+    display: inline-block;
+}
+#logoutdiv{
+    text-align: right;
+}
+#createaccountbutton{
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    color: white;
+    background-color: #3838b6;
+}
